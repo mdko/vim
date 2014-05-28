@@ -50,6 +50,7 @@ set foldcolumn=4		" size of column on left showing open/closed folds
 "nnoremap $ <nop>
 "nnoremap ^ <nop>
 nnoremap gV `[v`]
+vnoremap . :norm.<CR>	 " Thanks to http://www.danielmiessler.com/study/vim/ for this
 " }}}
 " Leader Shortcuts {{{
 let mapleader=","
