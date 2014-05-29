@@ -1,5 +1,6 @@
 " Based on .vimrc by Douglas Black (http://dougblack.io/words/a-good-vimrc.html),
-" with lines I do not need/like/understand yet commented out
+" with lines I do not need/like/understand yet commented out.
+" Also some tips from Steve Losh (http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
 " Colors {{{
 syntax enable           " enable syntax processing
 "colorscheme badwolf
@@ -8,6 +9,10 @@ syntax enable           " enable syntax processing
 set ttyfast                     " faster redraw
 set backspace=indent,eol,start
 set clipboard=unnamed
+"set hidden
+set undofile					" create a .un~ file whenever editing a file
+nnoremap ; :
+inoremap jk <esc>
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
@@ -27,11 +32,32 @@ set cursorline          " highlight current line
 set wildmenu
 "set lazyredraw
 set showmatch           " higlight matching parenthesis
+set showmode
+set scrolloff=3			" how far away from screen edges before screen scrolls
+set ruler
+set laststatus=2
+"set formatoptions=qrn1
+set colorcolumn=80
 " }}}
-" Searching {{{
+" Searching & Moving {{{
 set ignorecase          " ignore case when searching
+set smartcase			" ...unless you word has a capital letter
+set gdefault			" applies substitutions globally on lines
+set showmatch			" jump to matching bracket when inserted
 set incsearch           " search as characters are entered
 set hlsearch            " highlight all matches
+nnoremap <up> <nop>		" to stop using the stupid directional arrows
+nnoremap <down> <nop>
+nnoremap <right> <nop>
+nnoremap <left> <nop>
+inoremap <up> <nop>	
+inoremap <down> <nop>
+inoremap <right> <nop>
+inoremap <left> <nop>
+nnoremap <C-h> <C-w>h	" move around split windows more easily
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 " }}}
 " Folding {{{
 "=== folding ===
@@ -49,6 +75,8 @@ set foldcolumn=4		" size of column on left showing open/closed folds
 "nnoremap E $
 "nnoremap $ <nop>
 "nnoremap ^ <nop>
+nnoremap <tab> %
+vnoremap <tab> %
 nnoremap gV `[v`]
 vnoremap . :norm.<CR>	 " Thanks to http://www.danielmiessler.com/study/vim/ for this
 " }}}
@@ -61,23 +89,25 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>l :call ToggleNumber()<CR>
+nnoremap <leader>n :call ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
-"nnoremap <leader>a :Ag 
-"nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
+"nnoremap <leader>a :Ag			" silver searcher -- like ack, but better
+nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :set number!<CR>
 "nnoremap <leader>d :Make! 
 "nnoremap <leader>r :call RunTestFile()<CR>
 "nnoremap <leader>g :call RunGoFile()<CR>
 "vnoremap <leader>y :w !pbcopy<CR><CR>
-inoremap jk <esc>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>	" strip trailing whitespace
+nnoremap <leader>l :set list!
+nnoremap <leader>w <C-w>v<C-w>l
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
 " }}}
 " Powerline {{{
-"set encoding=utf-8
+set encoding=utf-8
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
 "python del powerline_setup
@@ -93,12 +123,11 @@ runtime ftplugin/man.vim
 "let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
 " }}}
 " Syntastic {{{
-"let g:syntastic_python_flake8_args='--ignore=E501'
 "let g:syntastic_ignore_files = ['.java$']
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
-"set nocompatible
+set nocompatible " don't make it vi compatible
 call pathogen#infect()
 " }}}
 " Tmux {{{
