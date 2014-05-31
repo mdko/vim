@@ -35,7 +35,6 @@ set showmatch           " higlight matching parenthesis
 set showmode
 set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
-set laststatus=2
 "set formatoptions=qrn1
 set colorcolumn=80
 " }}}
@@ -111,7 +110,11 @@ set encoding=utf-8
 "python from powerline.vim import setup as powerline_setup
 "python powerline_setup()
 "python del powerline_setup
-"set laststatus=2
+set laststatus=2
+" }}}
+" Vim-Airline {{{
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
 " }}}
 " CtrlP {{{
 "let g:ctrlp_match_window = 'bottom,order:ttb'
