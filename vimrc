@@ -13,6 +13,7 @@ set clipboard=unnamed
 set undofile					" create a .un~ file whenever editing a file
 nnoremap ; :
 inoremap jk <esc>
+noremap Y y$
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
@@ -45,14 +46,6 @@ set gdefault			" applies substitutions globally on lines
 set showmatch			" jump to matching bracket when inserted
 set incsearch           " search as characters are entered
 set hlsearch            " highlight all matches
-nnoremap <up> <nop>		" to stop using the stupid directional arrows
-nnoremap <down> <nop>
-nnoremap <right> <nop>
-nnoremap <left> <nop>
-inoremap <up> <nop>	
-inoremap <down> <nop>
-inoremap <right> <nop>
-inoremap <left> <nop>
 nnoremap <C-h> <C-w>h	" move around split windows more easily
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -99,8 +92,9 @@ nnoremap <leader>1 :set number!<CR>
 "nnoremap <leader>g :call RunGoFile()<CR>
 "vnoremap <leader>y :w !pbcopy<CR><CR>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>	" strip trailing whitespace
-nnoremap <leader>l :set list!
+nnoremap <leader>l :set list!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>r :set wrap!<cr>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
