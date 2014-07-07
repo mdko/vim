@@ -95,6 +95,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>	" strip trailing whitespace
 nnoremap <leader>l :set list!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>r :set wrap!<cr>
+nnoremap <leader>p :set paste!<cr>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
