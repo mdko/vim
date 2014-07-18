@@ -109,7 +109,7 @@ set encoding=utf-8
 set laststatus=2
 " }}}
 " Ctags (For function name display) {{{
-let g:ctags_path='/usr/bin/ctags'
+"let g:ctags_path='/usr/bin/ctags'
 "let g:ctags_args='-L <files to create tags from>' " Args to pass to ctags
 let g:ctags_title=0				  " To show tag name in title bar.
 let g:ctags_statusline=1		  " To show tag name in status line.
