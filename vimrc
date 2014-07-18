@@ -107,6 +107,13 @@ set encoding=utf-8
 "python del powerline_setup
 set laststatus=2
 " }}}
+" Ctags (For function name display) {{{
+let g:ctags_path='/usr/bin/ctags'
+"let g:ctags_args='-L <files to create tags from>' " Args to pass to ctags
+let g:ctags_title=0				  " To show tag name in title bar.
+let g:ctags_statusline=1		  " To show tag name in status line.
+let generate_tags=1				  " To start automatically when a supported
+" }}}
 " Vim-Airline {{{
 "let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
