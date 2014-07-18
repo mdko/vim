@@ -38,6 +38,7 @@ set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
 set colorcolumn=80
+set title
 " }}}
 " Searching & Moving {{{
 set ignorecase          " ignore case when searching
@@ -111,7 +112,7 @@ set laststatus=2
 " Ctags (For function name display) {{{
 "let g:ctags_path='/usr/bin/ctags'
 "let g:ctags_args='-L <files to create tags from>' " Args to pass to ctags
-let g:ctags_title=0				  " To show tag name in title bar.
+let g:ctags_title=1				  " To show tag name in title bar.
 let g:ctags_statusline=1		  " To show tag name in status line.
 let generate_tags=1				  " To start automatically when a supported
 " }}}
@@ -187,5 +188,8 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 " }}}
-
+" Other {{{
+" TODO: figure out a way to replace 'f' with 'F' in statusline when wanted
+" }}}
+"
 " vim:foldmethod=marker:foldlevel=0

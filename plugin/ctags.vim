@@ -321,13 +321,15 @@ function! s:SetTagDisplay()
 	let w:tag_name = l:tag_name
 	let s:ruler = &ruler
 	if &ruler
-	    let &statusline='%<%f %(%h%m%r %)%=%{TagName()} %-15.15(%l,%c%V%)%P'
+	    let &statusline='%<%F %(%h%m%r %)%=%{TagName()} %-15.15(%l,%c%V%)%P'
+	    " let &statusline='%<%f %(%h%m%r %)%=%{TagName()} %-15.15(%l,%c%V%)%P'
 					" Equivalent to default status
 					" line with 'ruler' set:
 					"
 					" '%<%f %h%m%r%=%-15.15(%l,%c%V%)%P'
 	else
-	    let &statusline='%<%f %(%h%m%r %)%=%{TagName()}'
+	    let &statusline='%<%F %(%h%m%r %)%=%{TagName()}'
+	    " let &statusline='%<%f %(%h%m%r %)%=%{TagName()}'
 	endif
 					" The %(%) pair around the "%h%m%r "
 					" is there to suppress the extra
@@ -337,7 +339,8 @@ function! s:SetTagDisplay()
     endif
     if (g:ctags_title != 0) && (l:tag_name != s:title_tag_name)
 	let s:title_tag_name = l:tag_name
-	let &titlestring='%t%( %M%)%( (%{expand("%:~:.:h")})%)%( %a%)%='.s:title_tag_name
+	let &titlestring='%t%( %M%)%( (%{expand("%:p:h")})%)%( %a%)%='.s:title_tag_name
+	" let &titlestring='%t%( %M%)%( (%{expand("%:~:.:h")})%)%( %a%)%='.s:title_tag_name
     endif
 endfunction
 
