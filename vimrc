@@ -96,6 +96,7 @@ nnoremap <leader>l :set list!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>r :set wrap!<cr>
 nnoremap <leader>p :set paste!<cr>
+nnoremap <leader>ct :!ctags -R *<cr>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
