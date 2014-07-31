@@ -4,6 +4,7 @@
 " Colors {{{
 syntax enable           " enable syntax processing
 "colorscheme badwolf
+set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
@@ -77,6 +78,7 @@ vnoremap . :norm.<CR>	 " Thanks to http://www.danielmiessler.com/study/vim/ for 
 let mapleader=","
 "nnoremap <leader>m :silent make\|redraw!\|cw<CR>
 "nnoremap <leader>w :NERDTree<CR>
+" Gundo: git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
 nnoremap <leader>u :GundoToggle<CR>
 "nnoremap <leader>h :A<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
@@ -98,6 +100,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>r :set wrap!<cr>
 nnoremap <leader>p :set paste!<cr>
 nnoremap <leader>ct :!ctags -R *<cr>
+nnoremap <leader>b :call ChangeColorMap()<CR>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
@@ -186,6 +189,16 @@ function! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     let @/=_s
     call cursor(l, c)
+endfunction
+
+" toggles default color map (light vs dark background)
+" see 'http://vim.wikia.com/wiki/Better_colors_for_syntax_highlighting'
+function! ChangeColorMap()
+	if (&background=="dark")
+		set background=light
+	else
+		set background=dark
+	endif
 endfunction
 " }}}
 " Other {{{
