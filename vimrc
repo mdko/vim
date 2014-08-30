@@ -37,7 +37,7 @@ set showmode
 set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
-set colorcolumn=80
+set colorcolumn=61		" 80
 " }}}
 " Searching & Moving {{{
 set ignorecase          " ignore case when searching
@@ -120,7 +120,7 @@ set laststatus=2
 "let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
 " }}}
 " Syntastic {{{
-"let g:syntastic_ignore_files = ['.java$']
+let g:syntastic_ignore_files = ['.java$','.cpp']
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
