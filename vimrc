@@ -4,6 +4,7 @@
 " Colors {{{
 syntax enable           " enable syntax processing
 "colorscheme badwolf
+set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
@@ -38,6 +39,7 @@ set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
 set colorcolumn=61		" 80
+set title
 " }}}
 " Searching & Moving {{{
 set ignorecase          " ignore case when searching
@@ -76,6 +78,7 @@ vnoremap . :norm.<CR>	 " Thanks to http://www.danielmiessler.com/study/vim/ for 
 let mapleader=","
 "nnoremap <leader>m :silent make\|redraw!\|cw<CR>
 "nnoremap <leader>w :NERDTree<CR>
+" Gundo: git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
 nnoremap <leader>u :GundoToggle<CR>
 "nnoremap <leader>h :A<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
@@ -95,6 +98,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>	" strip trailing whitespace
 nnoremap <leader>l :set list!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>r :set wrap!<cr>
+nnoremap <leader>p :set paste!<cr>
+nnoremap <leader>ct :!ctags -R *<cr>
+nnoremap <leader>b :call ChangeColorMap()<CR>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
@@ -105,6 +111,13 @@ set encoding=utf-8
 "python powerline_setup()
 "python del powerline_setup
 set laststatus=2
+" }}}
+" Ctags (For function name display) {{{
+"let g:ctags_path='/usr/bin/ctags'
+"let g:ctags_args='-L <files to create tags from>' " Args to pass to ctags
+let g:ctags_title=1				  " To show tag name in title bar.
+let g:ctags_statusline=1		  " To show tag name in status line.
+let generate_tags=1				  " To start automatically when a supported
 " }}}
 " Vim-Airline {{{
 "let g:airline_powerline_fonts = 1
@@ -177,6 +190,19 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
-" }}}
 
+" toggles default color map (light vs dark background)
+" see 'http://vim.wikia.com/wiki/Better_colors_for_syntax_highlighting'
+function! ChangeColorMap()
+	if (&background=="dark")
+		set background=light
+	else
+		set background=dark
+	endif
+endfunction
+" }}}
+" Other {{{
+" TODO: figure out a way to replace 'f' with 'F' in statusline when wanted
+" }}}
+"
 " vim:foldmethod=marker:foldlevel=0
