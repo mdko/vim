@@ -148,7 +148,7 @@ let g:CCTreeCscopeDb = "$CSCOPE_DB"
 " }}}
 " Ctags {{{
 set tags=$CTAGS
-set csto=1 " set to 1 for vim to use ctags file before cscope file
+set csto=0 " set to 1 for vim to use ctags file before cscope file
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
