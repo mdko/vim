@@ -18,7 +18,7 @@ noremap Y y$
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
-set expandtab           " use spaces for tabs
+"set expandtab           " use spaces for tabs
 set softtabstop=4       " 4 space tab
 set shiftwidth=4        " 4 spaces when shifting blocks with >>, <<
 set modeline
@@ -134,14 +134,6 @@ let generate_tags=1				  " To start automatically when a supported
 " }}}
 " Syntastic {{{
 let g:syntastic_ignore_files = ['.java$','.cpp']
-" }}}
-" Trinity {{{
-nnoremap <leader>t :TrinityToggleAll<CR>
-" nmap <leader>[something] :TrinityToggleSourceExplorer<CR>
-" nmap <leader>[something] :TrinityToggleTagList<CR>
-" nmap <leader>[something] :TrinityToggleNERDTree<CR>
-" -- for Source_Explorer
-" let g:SrcExpl_updateTagsCmd = "-L /home/michael/Development/cscope/linux-3.14.0-rc1/cscope.files" 
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
