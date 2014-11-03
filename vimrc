@@ -141,7 +141,10 @@ nnoremap <leader>t :TrinityToggleAll<CR>
 " nmap <leader>[something] :TrinityToggleTagList<CR>
 " nmap <leader>[something] :TrinityToggleNERDTree<CR>
 " -- for Source_Explorer
-" let g:SrcExpl_updateTagsCmd = "-L /home/michael/Development/cscope/linux-3.14.0-rc1/cscope.files" 
+" let g:SrcExpl_updateTagsCmd = ""
+" }}}
+" CCTree {{{
+let g:CCTreeCscopeDb = "$CSCOPE_DB"
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
