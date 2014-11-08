@@ -14,4 +14,4 @@ trinity plugin already has an edited NERDTree plugin file). And
 by installed, I mean their folders symbolically linked to the
 'bundle' folder where Pathogen looks.
 
-Use ':HelpTags' to generate the help file for the plugins.
+Use ':Helptags' to generate the help file for the plugins.
