@@ -3,8 +3,8 @@
 " Also some tips from Steve Losh (http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
 " Colors {{{
 syntax enable           " enable syntax processing
-"colorscheme badwolf
 set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
+colorscheme bandit
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
