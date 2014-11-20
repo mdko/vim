@@ -1,0 +1,13 @@
+To create own syntax files, put them in here (~/.vim/syntax),
+then start using them:
+
+	:w ~/.vim/syntax/c.vim
+	:set syntax=mine
+
+
+To add to an existing syntax file, create a directory called
+'after/syntax' and write to a file with the same name as the
+original syntax file you're trying to append to:
+
+	mkdir -p ~/.vim/after/syntax
+	:w ~/.vim/after/syntax/c.vim
