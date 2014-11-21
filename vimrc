@@ -4,7 +4,7 @@
 " Colors {{{
 syntax enable           " enable syntax processing
 set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
-colorscheme bandit
+"colorscheme bandit
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
@@ -149,6 +149,12 @@ let g:CCTreeCscopeDb = "$CSCOPE_DB"
 " Ctags {{{
 set tags=$CTAGS
 set csto=0 " set to 1 for vim to use ctags file before cscope file
+" }}}
+" TagHighlight {{{
+if ! exists('g:TagHighlightSettings')
+let g:TagHighlightSettings = {}
+endif
+"let g:TagHighlightSettings['TagFileName'] = $CTAGS
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
