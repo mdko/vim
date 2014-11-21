@@ -5,6 +5,7 @@
 syntax enable           " enable syntax processing
 set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
 "colorscheme bandit
+hi Comment ctermfg=DarkYellow
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
