@@ -39,7 +39,7 @@ set showmode
 set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
-set colorcolumn=61		" 80
+set colorcolumn=130 " 61 " 80
 set title
 " }}}
 " Searching & Moving {{{
@@ -102,6 +102,7 @@ nnoremap <leader>r :set wrap!<cr>
 nnoremap <leader>p :set paste!<cr>
 nnoremap <leader>ct :!ctags -R *<cr>
 nnoremap <leader>b :call ChangeColorMap()<CR>
+nnoremap <leader>cl :call ToggleLeftHandInfo()<CR>  " toggle various lines, numbers, etc. on left side of screen, for easy visual copying
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
@@ -193,6 +194,13 @@ function! ToggleNumber()
     else
         set relativenumber
     endif
+endfunc
+
+function! ToggleLeftHandInfo()
+    " TODO actually toggle
+    set nonumber
+    set norelativenumber
+    set nofoldenable
 endfunc
 
 " strips trailing whitespace at the end of files. this
