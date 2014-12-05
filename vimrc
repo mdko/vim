@@ -152,6 +152,12 @@ let g:CCTreeCscopeDb = "$CSCOPE_DB"
 set tags=$CTAGS
 set csto=0 " set to 1 for vim to use ctags file before cscope file
 " }}}
+" TagHighlight {{{
+if ! exists('g:TagHighlightSettings')
+let g:TagHighlightSettings = {}
+endif
+"let g:TagHighlightSettings['TagFileName'] = $CTAGS
+" }}}
 " Launch Config {{{
 "runtime! debian.vim
 set nocompatible " don't make it vi compatible
