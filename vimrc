@@ -1,6 +1,8 @@
 " Based on .vimrc by Douglas Black (http://dougblack.io/words/a-good-vimrc.html),
 " with lines I do not need/like/understand yet commented out.
 " Also some tips from Steve Losh (http://stevelosh.com/blog/2010/09/coming-home-to-vim/).
+" Note: my .scm (scheme) files are set to be identified as racket for
+" syntax-highlighting purposes (via "~/.vim/bundle/vim-racket/ftdetect/racket.vim")
 " Colors {{{
 syntax enable           " enable syntax processing
 set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
@@ -17,14 +19,14 @@ set ttymouse=xterm2
 set backspace=indent,eol,start
 set clipboard=unnamed
 "set hidden
-set undofile					" create a .un~ file whenever editing a file
 nnoremap ; :
 inoremap jk <esc>
 noremap Y y$
+cnoremap W w
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
-set expandtab           " use spaces for tabs
+set expandtab           " use spaces for tabs (change for writing in C, leave for Haskell)
 set softtabstop=4       " 4 space tab
 set shiftwidth=4        " 4 spaces when shifting blocks with >>, <<
 set modeline
@@ -44,7 +46,7 @@ set showmode
 set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
-set colorcolumn=140 "61		" 80
+set colorcolumn=80 "65 140 61 80
 set title
 " }}}
 " Searching & Moving {{{
@@ -92,7 +94,7 @@ nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
-nnoremap <leader>s :mksession<CR>
+"nnoremap <leader>s :mksession<CR>
 "nnoremap <leader>a :Ag			" silver searcher -- like ack, but better
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :set number!<CR>
@@ -211,6 +213,13 @@ call pathogen#infect()
 " }}}
 " Slimv {{{
 "let g:slimv_swank_cmd = '! xterm -e clisp --load /home/michael/.vim/bundle-available/slime/slime/start-swank.lisp &'
+"let g:slimv_swank_cmd = '! xterm -e mit-scheme-x86-64 --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
+" }}}
+" Tslime {{{
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<leader>s'
+let g:tslime_visual_mapping = '<leader>s'
+let g:tslime_vars_mapping = '<leader>S'
 " }}}
 " Tmux {{{
 "if exists('$TMUX') " allows cursor change in tmux mode
@@ -225,7 +234,8 @@ call pathogen#infect()
 augroup configgroup
     autocmd!
     autocmd VimEnter * highlight clear SignColumn
-    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
+    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.rb :call <SID>StripTrailingWhitespaces()
+"    autocmd BufWritePre *.php,*.py,*.js,*.txt,*.hs,*.java,*.md,*.rb :call <SID>StripTrailingWhitespaces()
 "    autocmd BufEnter *.cls setlocal filetype=java
 "    autocmd BufEnter *.zsh-theme setlocal filetype=zsh
     autocmd BufEnter Makefile setlocal noexpandtab
@@ -234,11 +244,31 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal softtabstop=2
 augroup END
 " }}}
-" Backups {{{
+" Undos {{{
+set undofile					" create a .un~ file whenever editing a file
+" Put it in the current directory's .vim-undo dir if exists, otherwise home
+" ~/.vim-undo directory we create ourselves. See
+" http://stackoverflow.com/questions/4331776/change-vim-swap-backup-undo-file-name
+if exists("+undofile")
+    if isdirectory($HOME . '/.vim-undo') == 0
+        :silent !mkdir ~/.vim-undo > /dev/null 2>&1
+    endif
+    set undodir=./.vim-undo//
+    set undodir+=~/.vim-undo//
+    set undofile
+endif
+"}}}
+" Backups and Swaps {{{
 set backup 
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+if isdirectory($HOME . '/.vim-backup') == 0
+    :silent !mkdir ~/.vim-backup >/dev/null 2>&1
+endif
+set backupdir=./.vim-backup,~/.vim-backup,~/.tmp,~/tmp,/var/tmp,/tmp 
 set backupskip=/tmp/*,/private/tmp/* 
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+if isdirectory($HOME . '/.vim-swap') == 0
+    :silent !mkdir ~/.vim-swap >/dev/null 2>&1
+endif
+set directory=./.vim-swap//,~/.vim-swap//,~/.tmp,~/tmp,/var/tmp,/tmp 
 set writebackup
 " }}}
 " Custom Functions {{{
@@ -279,6 +309,11 @@ function! ChangeColorMap()
 		set background=dark
 	endif
 endfunction
+" }}}
+" K-framework {{{
+au BufRead,BufNewFile *.k set filetype=kframework
+au! Syntax kframework source kframework.vim
+syn on
 " }}}
 " Other {{{
 " TODO: figure out a way to replace 'f' with 'F' in statusline when wanted
