@@ -119,7 +119,6 @@
                            ((nil :none) :none)
                            ((:line) :line))))
 
-
 ;; The SIGIO stuff should probably be removed as it's unlikey that
 ;; anybody uses it.
 #-win32
@@ -163,7 +162,6 @@
       (sb-sys:invalidate-descriptor fd))
     (close socket)))
 
-
 (defimplementation add-fd-handler (socket fun)
   (let ((fd (socket-fd socket))
         (handler nil))

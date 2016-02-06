@@ -42,6 +42,9 @@ if has("cscope")
         cs add cscope.out  
     " else add the database pointed to by environment variable 
     elseif $CSCOPE_DB != ""
+        if $USE_HSCOPE != ""
+          set cscopeprg=hscope
+        endif
         cs add $CSCOPE_DB
     endif
 

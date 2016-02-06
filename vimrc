@@ -8,6 +8,7 @@ syntax enable           " enable syntax processing
 set background=dark		" if you have a dark background in terminal, gets a better color map for syntax highlighting (tells Vim what bg color looks like)
 "colorscheme bandit
 hi Comment ctermfg=DarkYellow
+let g:lisp_rainbow=1
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
@@ -19,16 +20,16 @@ set ttymouse=xterm2
 set backspace=indent,eol,start
 set clipboard=unnamed
 "set hidden
-nnoremap ; :
+"nnoremap ; :
 inoremap jk <esc>
 noremap Y y$
-cnoremap W w
+"cnoremap W w
 " }}}
 " Spaces & Tabs {{{
-set tabstop=4           " 4 space tab
+set tabstop=2           " 4 space tab
 set expandtab           " use spaces for tabs (change for writing in C, leave for Haskell)
-set softtabstop=4       " 4 space tab
-set shiftwidth=4        " 4 spaces when shifting blocks with >>, <<
+set softtabstop=2       " 4 space tab
+set shiftwidth=2        " 4 spaces when shifting blocks with >>, <<
 set modeline
 set modelines=1         " number of lines at beginning/end of file checked for modelines
 filetype indent on
@@ -46,7 +47,7 @@ set showmode
 set scrolloff=3			" how far away from screen edges before screen scrolls
 set ruler
 "set formatoptions=qrn1
-set colorcolumn=80 "65 140 61 80
+"set colorcolumn=160 "65 140 61 80
 set title
 " }}}
 " Searching & Moving {{{
@@ -85,7 +86,7 @@ vnoremap . :norm.<CR>	 " Thanks to http://www.danielmiessler.com/study/vim/ for 
 " Leader Shortcuts {{{
 let mapleader=","
 "nnoremap <leader>m :silent make\|redraw!\|cw<CR>
-"nnoremap <leader>w :NERDTree<CR>
+nnoremap <leader>nt :NERDTree<CR>
 " Gundo: git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
 nnoremap <leader>u :GundoToggle<CR>
 "nnoremap <leader>h :A<CR>
@@ -94,22 +95,25 @@ nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>n :call ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
-"nnoremap <leader>s :mksession<CR>
-"nnoremap <leader>a :Ag			" silver searcher -- like ack, but better
+nnoremap <leader>s :mksession<CR>
+" silver searcher (https://github.com/rking/ag.vim) -- like ack, but better
+nnoremap <leader>a :Ag
 nnoremap <leader>c :SyntasticCheck<CR>:Errors<CR>
 nnoremap <leader>1 :set number!<CR>
 "nnoremap <leader>d :Make! 
 "nnoremap <leader>r :call RunTestFile()<CR>
 "nnoremap <leader>g :call RunGoFile()<CR>
 "vnoremap <leader>y :w !pbcopy<CR><CR>
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>	" strip trailing whitespace
+" strip trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>l :set list!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>r :set wrap!<cr>
 nnoremap <leader>p :set paste!<cr>
 nnoremap <leader>ct :!ctags -R *<cr>
 nnoremap <leader>b :call ChangeColorMap()<CR>
-nnoremap <leader>cl :call ToggleLeftHandInfo()<CR>  " toggle various lines, numbers, etc. on left side of screen, for easy visual copying
+" toggle various lines, numbers, etc. on left side of screen, for easy visual copying
+nnoremap <leader>cl :call ToggleLeftHandInfo()<CR>
 " }}}
 " Man Plugin {{{
 runtime ftplugin/man.vim
@@ -133,10 +137,13 @@ let generate_tags=1				  " To start automatically when a supported
 "let g:airline#extensions#tabline#enabled = 1
 " }}}
 " CtrlP {{{
-"let g:ctrlp_match_window = 'bottom,order:ttb'
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_working_path_mode = 0
+" Details on use at: https://github.com/kien/ctrlp.vim
+" See also: help ctrlp
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
 "let g:ctrlp_custom_ignore = '\vbuild/|dist/|venv/|\.(o|swp|pyc|egg)$'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 " }}}
 " NERDTree {{{
 "let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
@@ -206,20 +213,75 @@ let g:TagHighlightSettings = {}
 endif
 "let g:TagHighlightSettings['TagFileName'] = $CTAGS
 " }}}
+" SHIM {{{
+" Superior Haskell Interaction Mode
+" (http://www.vim.org/scripts/script.php?script_id=2356)
+autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
+autocmd FileType haskell vmap <C-c><C-l> :GhciRange<CR>
+autocmd FileType haskell nmap <C-c><C-f> :GhciFile<CR>
+autocmd FileType haskell nmap <C-c><C-r> :GhciReload<CR>
+" }}}
+" Tagbar (need to fix) {{{
+nmap <leader>= :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+" }}}
+" Pointfree (not using yet) {{{
+"autocmd BufEnter *.hs set formatprg=pointfree
+" }}}
+" Ghc-mod {{{
+" This seems to work better than hdevtools for getting the type
+nmap <silent> <leader>tl :GhcModLint<CR>
+nmap <silent> <leader>tt :GhcModType<CR>
+nmap <silent> <leader>tc :GhcModCheck<CR>
+" nmap <silent> <leader>te :GhcModExpand<CR>
+" nmap <silent> <leader>ts :GhcModSplit<CR>
+" }}}
+" Hdevtools {{{
+" See [https://github.com/bitc/vim-hdevtools]
+au FileType haskell nnoremap <buffer> <leader>h :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <leader>hc :HdevtoolsClear<CR>
+au FileType haskell nnoremap <buffer> <silent> <leader>hi :HdevtoolsInfo<CR>
+" }}}
 " Launch Config {{{
 "runtime! debian.vim
 set nocompatible " don't make it vi compatible
 call pathogen#infect()
+"call pathogen#runtime_append_all_bundles()  " use pathogen
+filetype off
+syntax on
+filetype plugin indent on
 " }}}
-" Slimv {{{
-"let g:slimv_swank_cmd = '! xterm -e clisp --load /home/michael/.vim/bundle-available/slime/slime/start-swank.lisp &'
-"let g:slimv_swank_cmd = '! xterm -e mit-scheme-x86-64 --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
+" Vim-slime (working!) {{{
+" See [https://github.com/jpalardy/vim-slime]
+" Steps: 1. run tmux
+"        2. open window with two panes, one running ghci/whatever
+"        3. select text visually and run C-c C-c to send to target pane
+" Target pane information:
+"   ":" current window, current pane
+"   ":i" ith window, current pane
+"   ":i.j" ith window, jth pane
+"   "h:i.j" h session identifier, etc.
+"   "%i" pane's unique id i
+let g:slime_target = "tmux"
+let g:slime_paste_file = tempname()
+let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+"}}}
+" Slimv (for Lisp/Scheme) {{{
+"let g:slimv_swank_cmd = '! xterm -e clisp /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
+"let g:slimv_swank_cmd = '! xterm -e mit-scheme-x86-64 --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &' "I want something like to work
+let g:slimv_swank_cmd = '! xterm -e sbcl --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
+"let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/bundle/slimv/slime/start-swank.lisp"'
 " }}}
-" Tslime {{{
-let g:tslime_ensure_trailing_newlines = 1
-let g:tslime_normal_mapping = '<leader>s'
-let g:tslime_visual_mapping = '<leader>s'
-let g:tslime_vars_mapping = '<leader>S'
+" Tslime (unused) {{{
+"let g:tslime_ensure_trailing_newlines = 1
+"let g:tslime_always_current_session = 1
+"let g:tslime_always_current_window = 1
+"let g:tslime_normal_mapping = '<leader>s'
+"let g:tslime_visual_mapping = '<leader>s'
+"let g:tslime_vars_mapping = '<leader>S'
+"vmap <C-c><C-c> <Plug>SendSelectionTmux
+"nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+"nmap <C-c>r <Plug>SetTmuxVars
 " }}}
 " Tmux {{{
 "if exists('$TMUX') " allows cursor change in tmux mode
@@ -242,6 +304,7 @@ augroup configgroup
     autocmd BufEnter *.sh setlocal tabstop=2
     autocmd BufEnter *.sh setlocal shiftwidth=2
     autocmd BufEnter *.sh setlocal softtabstop=2
+    autocmd BufRead,BufNewFile *.scheme set syntax=scheme
 augroup END
 " }}}
 " Undos {{{
