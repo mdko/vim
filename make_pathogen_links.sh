@@ -1,3 +1,4 @@
+# Some fiddling might need to be done with these paths, perhaps non-relative
 pathogen_dir="~/.vim/bundle"
 plugins_dir="~/.vim/bundle-available"
 current_bundles="current-bundles-used"
@@ -8,4 +9,4 @@ fi
 
 while read plugin; do
   ln -s "$plugins_dir/$plugin" "$pathogen_dir/$plugin"
-done < current_bundles
+done < $current_bundles
