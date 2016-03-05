@@ -1,10 +1,11 @@
 pathogen_dir="~/.vim/bundle"
 plugins_dir="~/.vim/bundle-available"
+current_bundles="current-bundles-used"
 
 if [ ! -d "$pathogen_dir" ]; then
   mkdir "$pathogen_dir"
 fi
 
-for i in `ls $plugins_dir`; do
-  ln -s "$plugins_dir/$i" "$pathogen_dir/$i"
-done
+while read plugin; do
+  ln -s "$plugins_dir/$plugin" "$pathogen_dir/$plugin"
+done < current_bundles

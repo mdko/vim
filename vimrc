@@ -49,6 +49,8 @@ set ruler
 "set formatoptions=qrn1
 "set colorcolumn=160 "65 140 61 80
 set title
+" set splitbelow
+" set splitright
 " }}}
 " Searching & Moving {{{
 set ignorecase          " ignore case when searching
@@ -149,7 +151,8 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 "let NERDTreeIgnore = ['\.pyc$', 'build', 'venv', 'egg', 'egg-info/', 'dist', 'docs']
 " }}}
 " Syntastic {{{
-let g:syntastic_ignore_files = ['.java$','.cpp']
+"let g:syntastic_ignore_files = ['.java$','.cpp']
+let g:syntastic_ignore_files = ['.java$','.cpp','.hs','.scala']
 " }}}
 " Trinity {{{
 nnoremap <leader>t :TrinityToggleAll<CR>
@@ -230,17 +233,17 @@ let g:tagbar_autofocus = 1
 " }}}
 " Ghc-mod {{{
 " This seems to work better than hdevtools for getting the type
-nmap <silent> <leader>tl :GhcModLint<CR>
-nmap <silent> <leader>tt :GhcModType<CR>
-nmap <silent> <leader>tc :GhcModCheck<CR>
-" nmap <silent> <leader>te :GhcModExpand<CR>
-" nmap <silent> <leader>ts :GhcModSplit<CR>
+nmap <silent> <leader>gl :GhcModLint<CR>
+nmap <silent> <leader>gt :GhcModType<CR>
+nmap <silent> <leader>gc :GhcModCheck<CR>
+" nmap <silent> <leader>ge :GhcModExpand<CR>
+" nmap <silent> <leader>gs :GhcModSplit<CR>
 " }}}
 " Hdevtools {{{
 " See [https://github.com/bitc/vim-hdevtools]
-au FileType haskell nnoremap <buffer> <leader>h :HdevtoolsType<CR>
-au FileType haskell nnoremap <buffer> <silent> <leader>hc :HdevtoolsClear<CR>
 au FileType haskell nnoremap <buffer> <silent> <leader>hi :HdevtoolsInfo<CR>
+au FileType haskell nnoremap <buffer> <leader>ht :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <leader>hc :HdevtoolsClear<CR>
 " }}}
 " Launch Config {{{
 "runtime! debian.vim
@@ -282,6 +285,9 @@ let g:slimv_swank_cmd = '! xterm -e sbcl --load /home/michael/.vim/bundle/slimv/
 "vmap <C-c><C-c> <Plug>SendSelectionTmux
 "nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 "nmap <C-c>r <Plug>SetTmuxVars
+" }}}
+" Vim-Tmux-Navigator {{{
+"let g:tmux_navigator_save_on_switch = 1
 " }}}
 " Tmux {{{
 "if exists('$TMUX') " allows cursor change in tmux mode
@@ -326,12 +332,12 @@ set backup
 if isdirectory($HOME . '/.vim-backup') == 0
     :silent !mkdir ~/.vim-backup >/dev/null 2>&1
 endif
-set backupdir=./.vim-backup,~/.vim-backup,~/.tmp,~/tmp,/var/tmp,/tmp 
+set backupdir=./.vim-backup,~/.vim-backup,~/.tmp,~/.local/tmp,/var/tmp,/tmp 
 set backupskip=/tmp/*,/private/tmp/* 
 if isdirectory($HOME . '/.vim-swap') == 0
     :silent !mkdir ~/.vim-swap >/dev/null 2>&1
 endif
-set directory=./.vim-swap//,~/.vim-swap//,~/.tmp,~/tmp,/var/tmp,/tmp 
+set directory=./.vim-swap//,~/.vim-swap//,~/.tmp,~/.local/tmp,/var/tmp,/tmp 
 set writebackup
 " }}}
 " Custom Functions {{{
@@ -377,6 +383,25 @@ endfunction
 au BufRead,BufNewFile *.k set filetype=kframework
 au! Syntax kframework source kframework.vim
 syn on
+" }}}
+" Digraphs {{{
+" use via C-k <char><char>
+digraphs bo 8869 "⊥
+digraphs to 8868 "⊤
+digraphs tl 8867 "⊣
+digraphs tr 8866 "⊢
+digraphs ra 8614 "↦ 
+digraphs ai 8788 "≔ 
+digraphs as 10868 "⩴ 
+digraphs de 10869 "⩵ 
+digraphs lp 8888 "⊸ 
+digraphs ds 8853 "⊕ 
+digraphs ts 8855 "⊗
+digraphs ul 8988 "⌜
+digraphs ur 8989 "⌝
+digraphs bl 8990 "⌞
+digraphs br 8991 "⌟
+"digraphs dd "⋯
 " }}}
 " Other {{{
 " TODO: figure out a way to replace 'f' with 'F' in statusline when wanted
