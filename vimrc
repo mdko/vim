@@ -395,16 +395,29 @@ digraphs ai 8788 "≔
 digraphs as 10868 "⩴ 
 digraphs de 10869 "⩵ 
 digraphs lp 8888 "⊸ 
-digraphs ds 8853 "⊕ 
-digraphs ts 8855 "⊗
+digraphs ld 8853 "⊕ 
+digraphs md 8855 "⊗
 digraphs ul 8988 "⌜
 digraphs ur 8989 "⌝
 digraphs bl 8990 "⌞
 digraphs br 8991 "⌟
+digraphs me 8851 "⊓
+digraphs jo 8852 "⊔
 "digraphs dd "⋯
 " }}}
-" Other {{{
-" TODO: figure out a way to replace 'f' with 'F' in statusline when wanted
+" LaTex/Conceal? {{{
+"See inside .../after/syntax
+set cole=2
+let g:tex_conceal='adgm'
+hi Conceal guibg=black guifg=white
+" }}}
+" Latex Unicoder {{{
+let g:unicoder_cancel_normal = 1
+let g:unicoder_cancel_insert = 1
+let g:unicoder_cancel_visual = 1
+"nnoremap <C-m> :call unicoder#start(0)<CR>
+"inoremap <C-m> <Esc>:call unicoder#start(1)<CR>
+"vnoremap <C-m> :<C-u>call unicoder#selection()<CR>
 " }}}
 "
 " vim:foldmethod=marker:foldlevel=0
