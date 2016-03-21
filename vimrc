@@ -269,11 +269,13 @@ let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
 "}}}
-" Slimv (for Lisp/Scheme) {{{
+" Slimv (for Lisp/Scheme/Clojure: use with <leader>c) (unused) {{{
 "let g:slimv_swank_cmd = '! xterm -e clisp /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
 "let g:slimv_swank_cmd = '! xterm -e mit-scheme-x86-64 --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &' "I want something like to work
-let g:slimv_swank_cmd = '! xterm -e sbcl --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
+"let g:slimv_swank_cmd = '! xterm -e sbcl --load /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
 "let g:slimv_swank_cmd = '! tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/bundle/slimv/slime/start-swank.lisp"'
+"let g:slimv_swank_clojure = '! xterm -e lein swank &'
+"let g:slimv_swank_clojure = '! tmux new-window -d -n LEIN-SWANK "lein swank"'
 " }}}
 " Tslime (unused) {{{
 "let g:tslime_ensure_trailing_newlines = 1
@@ -419,5 +421,26 @@ let g:unicoder_cancel_visual = 1
 "inoremap <C-m> <Esc>:call unicoder#start(1)<CR>
 "vnoremap <C-m> :<C-u>call unicoder#selection()<CR>
 " }}}
-"
+" Clojure Information {{{
+" Tips from:
+"   [http://www.zeespencer.com/the-vim-lovers-guide-to-editing-clojure/]
+"   [http://neo.com/2014/02/25/getting-started-with-clojure-in-vim/]
+" 1) paredit in the slimv plugin's directory
+" 2) vim-surround
+"    - cs<motion><current-char><new-char>  (change surrounding)
+"      * e.g. cs[(
+"    - ys<motion><char> (you surround)
+"      * e.g. ysiw(  or  ys$ or ys2f[(
+"    - ds<char>  (delete surrounding)
+" 3) vim-fireplace/vim-salve
+"    - open up a 'lein repl' in the project's directory (in one tmux window)
+"    - edit .clj file in a different tmux window
+"      * it should automatically connect to repl in above step
+"    - commands:
+"      * %Eval
+"      * cp(r|p) (clojure please require/print)
+"      * cq(p|c) (clojure quick print/cmd line window)
+"      * K (documentation for symbol under cursor)
+"      * [d, [C-d, :A, :Eval <code>, etc.
+" }}}
 " vim:foldmethod=marker:foldlevel=0

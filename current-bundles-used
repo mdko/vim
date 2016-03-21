@@ -7,7 +7,6 @@ gundo1
 hdevtools
 nerdtree1
 shim
-slimv
 srcexpl
 syntastic1
 tagbar
@@ -18,3 +17,9 @@ vimproc.vim
 vim-scala
 vim-slime
 vim-tmux-navigator
+vim-fugitive
+vim-surround
+vim-fireplace
+vim-salve
+vim-projectionist
+vim-dispatch
