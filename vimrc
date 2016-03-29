@@ -9,6 +9,7 @@ set background=dark		" if you have a dark background in terminal, gets a better 
 "colorscheme bandit
 hi Comment ctermfg=DarkYellow
 let g:lisp_rainbow=1
+let g:rainbow_active=1
 " }}}
 " Misc {{{
 set ttyfast                     " faster redraw
@@ -425,7 +426,7 @@ let g:unicoder_cancel_visual = 1
 " Tips from:
 "   [http://www.zeespencer.com/the-vim-lovers-guide-to-editing-clojure/]
 "   [http://neo.com/2014/02/25/getting-started-with-clojure-in-vim/]
-" 1) paredit in the slimv plugin's directory
+" 1) paredit
 " 2) vim-surround
 "    - cs<motion><current-char><new-char>  (change surrounding)
 "      * e.g. cs[(
@@ -442,5 +443,33 @@ let g:unicoder_cancel_visual = 1
 "      * cq(p|c) (clojure quick print/cmd line window)
 "      * K (documentation for symbol under cursor)
 "      * [d, [C-d, :A, :Eval <code>, etc.
+" 4) rainbow-parentheses-improved (see below)
+" }}}
+" Rainbow Parentheses Improved {{{
+" I'm really only using this for Clojure, but it can be used for anything, just
+" set the filetype in separately (or remove this and it will use the default
+" configuration found in the plugin).
+let g:rainbow_conf = {
+\	'ctermfgs': ['red', 'yellow', 'green', 'cyan', 'magenta', 'red', 'yellow', 'green', 'cyan', 'magenta'],
+\	'guifgs': ['red1', 'orange1', 'yellow1', 'greenyellow', 'green1', 'springgreen1', 'cyan1', 'slateblue1', 'magenta1', 'purple1'],
+\	'operators': '_,_',
+\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\	'separately': {
+\		'*': {},
+\		'lisp': {
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\		},
+\		'tex': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\		},
+\		'vim': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\		},
+\		'html': {
+\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\		},
+\		'css': 0,
+\	}
+\}
 " }}}
 " vim:foldmethod=marker:foldlevel=0

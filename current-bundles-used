@@ -23,3 +23,5 @@ vim-fireplace
 vim-salve
 vim-projectionist
 vim-dispatch
+rainbow(-parentheses-improved)
+paredit
