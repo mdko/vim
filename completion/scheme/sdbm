@@ -1,0 +1,8 @@
+close-database
+delete!
+fetch
+next-pair
+open-database
+pair-fold
+pair-iterator
+store!

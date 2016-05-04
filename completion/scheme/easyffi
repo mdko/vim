@@ -1,0 +1,6 @@
+check-c-syntax
+foreign-include-path
+foreign-parse
+foreign-parse/declare
+parse-easy-ffi
+register-ffi-macro

@@ -1,0 +1,11 @@
+call-with-pty-process-io
+fcntl-ref
+fcntl-set!
+file-read/maybe
+file-select-one
+login-tty
+open-file-io/non-blocking
+open-pty
+open-pty-process
+process-alive?
+with-pty-process-io

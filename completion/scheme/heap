@@ -1,0 +1,14 @@
+heap
+heap->alist
+heap->list
+heap-change-key!
+heap-delete!
+heap-empty?
+heap-extract-extremum!
+heap-extremum
+heap-insert!
+heap-key
+heap-member?
+initial-heap-size
+make-max-heap
+make-min-heap

@@ -1,0 +1,9 @@
+lru-cache-capacity
+lru-cache-delete!
+lru-cache-flush!
+lru-cache-fold
+lru-cache-ref
+lru-cache-set!
+lru-cache-size
+lru-cache-walk
+make-lru-cache

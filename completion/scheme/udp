@@ -1,0 +1,16 @@
+udp-bind!
+udp-bound-port
+udp-bound?
+udp-close-socket
+udp-connect!
+udp-connected?
+udp-join-multicast-group
+udp-open-socket
+udp-open-socket*
+udp-recv
+udp-recvfrom
+udp-send
+udp-sendto
+udp-set-multicast-interface
+udp-socket-fd
+udp-socket?

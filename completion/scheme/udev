@@ -1,0 +1,15 @@
+make-udev-device
+udev-device-action
+udev-device-driver
+udev-device-node
+udev-device-parent-with-subsystem-devtype
+udev-device-properties
+udev-device-subsystem
+udev-device-sysname
+udev-device-sysnum
+udev-device-syspath
+udev-device-type
+udev-device?
+udev-list-devices
+udev-monitor-start
+udev-monitor-stop!

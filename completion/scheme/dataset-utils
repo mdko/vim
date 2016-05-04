@@ -1,0 +1,17 @@
+attribute-definition
+attribute-name
+class-probability
+entropy
+euclidean-distance
+filter-instances
+find-attribute-index
+get-attribute-values
+information-gain
+make-nominal-attribute
+make-numeric-attribute
+make-relation
+read-arff
+relation-attributes
+relation-data
+relation-name
+split-instances

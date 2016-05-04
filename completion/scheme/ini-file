@@ -1,0 +1,9 @@
+allow-bare-properties?
+allow-empty-values?
+default-section
+property-separator
+property-separator-patt
+property-value-map
+read-ini
+read-property
+write-ini

@@ -1,0 +1,16 @@
+z3:decode
+z3:decode-buffer
+z3:decode-file
+z3:decode-init
+z3:encode
+z3:encode-buffer
+z3:encode-buffer-to-blob
+z3:encode-file
+z3:encode-init
+z3:file-handle-fileno
+z3:file-handle?
+z3:handle?
+z3:open-compressed-input-file
+z3:open-compressed-output-file
+z3:read-decoded
+z3:write-encoded

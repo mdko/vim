@@ -1,0 +1,14 @@
+delay
+delay/timeout
+demand
+eager
+expectable
+force
+fulfil!
+future
+future/timeout
+lazy
+lazy-future
+order
+order/timeout
+timeout-condition?

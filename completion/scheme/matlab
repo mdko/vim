@@ -1,0 +1,15 @@
+*default-matlab-engine-command*
+*matlab-engine*
+matlab
+matlab->scheme
+matlab-append-to-path
+matlab-eval-string
+matlab-eval-strings
+matlab-get-visible
+matlab-load-variables
+matlab-save-variables
+matlab-set-visible
+matlab-start
+matlab-stop
+scheme->matlab!
+start-matlab!

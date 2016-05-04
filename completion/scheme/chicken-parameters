@@ -1,0 +1,17 @@
+case-sensitive
+command-line-arguments
+current-read-table
+dynamic-load-libraries
+eval-handler
+exit-handler
+force-finalizers
+implicit-exit-handler
+keyword-style
+load-verbose
+make-parameter
+parenthesis-synonyms
+program-name
+recursive-hash-max-depth
+repl-prompt
+reset-handler
+symbol-escape

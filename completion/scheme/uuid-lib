@@ -1,0 +1,16 @@
+make-uuid
+string->uuid
+uuid->string
+uuid-clear!
+uuid-compare
+uuid-copy
+uuid-generate
+uuid-null?
+uuid-parse
+uuid-unparse
+uuid<=?
+uuid<?
+uuid=?
+uuid>=?
+uuid>?
+uuid?

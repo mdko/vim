@@ -1,0 +1,16 @@
+exit/cantcreat
+exit/config
+exit/dataerr
+exit/ioerr
+exit/nohost
+exit/noinput
+exit/noperm
+exit/nouser
+exit/ok
+exit/oserr
+exit/osfile
+exit/protocol
+exit/software
+exit/tempfail
+exit/unavailable
+exit/usage

@@ -1,0 +1,17 @@
+basic-same-type?
+basic-type-of
+case-coerce
+coerce
+coerce-all
+coerce-composite-extension!
+coerce-extend!
+coerce-extended?
+coerce-extension-remove!
+extended-type-of
+make-case-coerce
+same-type?
+type-of
+type-of-composite-extension!
+type-of-extend!
+type-of-extended?
+type-of-extension-remove!

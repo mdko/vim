@@ -1,0 +1,12 @@
+current-workdir
+ssp-cache-dir
+ssp-close-tag
+ssp-eval-environment
+ssp-exit-handler
+ssp-handler
+ssp-include
+ssp-long-open-tag
+ssp-short-open-tag
+ssp-stringize
+web-scheme-eval-environment
+web-scheme-handler

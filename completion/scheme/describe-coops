@@ -1,0 +1,6 @@
+describe
+describe-object
+describe-sequence-limit
+dump
+hexdump
+set-describer!

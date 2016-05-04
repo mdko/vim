@@ -1,0 +1,10 @@
+callable-alist?
+callable-hash-table?
+callable-list?
+callable-string?
+callable-vector?
+make-callable-alist
+make-callable-hash-table
+make-callable-list
+make-callable-string
+make-callable-vector

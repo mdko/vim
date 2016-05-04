@@ -1,0 +1,14 @@
+add-key-binding!
+beep?
+completion-choices
+completion-list
+history-from-file
+history-max-lines
+history-to-file
+make-parley-port
+mark-more-input?
+parley
+print-completions
+refresh-line
+terminal-supported?
+word-class

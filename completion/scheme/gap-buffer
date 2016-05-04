@@ -1,0 +1,13 @@
+gb->lines
+gb->string
+gb-delete-char!
+gb-erase!
+gb-filter!
+gb-goto-char
+gb-insert-char!
+gb-insert-string!
+gb-point
+gb-point-max
+gb-point-min
+gb?
+make-gap-buffer

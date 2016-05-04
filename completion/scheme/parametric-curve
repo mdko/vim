@@ -1,0 +1,10 @@
+arc-length
+iterate-curve
+line-segment
+linear-curve
+map-curve
+parametric-curve?
+range-curve
+sample-curve
+sample-curve*
+simple-curve

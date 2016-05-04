@@ -1,0 +1,8 @@
+cgi-default-environment
+cgi-handler
+cgi-handler*
+fcgi-authorizer
+fcgi-filter
+fcgi-handler
+fcgi-register-application
+fcgi-responder

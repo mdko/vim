@@ -1,0 +1,12 @@
+hash-table->lmdb
+lmdb->table
+lmdb-close
+lmdb-count
+lmdb-delete
+lmdb-fold
+lmdb-for-each
+lmdb-keys
+lmdb-open
+lmdb-ref
+lmdb-set!
+lmdb-values

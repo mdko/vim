@@ -1,0 +1,10 @@
+:
+count
+empty?
+isa?
+receive!
+receive-all!
+send!
+send-list/anyway!!
+send/blocking!
+size

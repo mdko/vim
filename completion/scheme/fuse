@@ -1,0 +1,14 @@
+file/blk
+file/chr
+file/dir
+file/fifo
+file/lnk
+file/reg
+file/sock
+filesystem
+filesystem-running?
+filesystem-start!
+filesystem-stop!
+filesystem-wait!
+filesystem?
+make-filesystem

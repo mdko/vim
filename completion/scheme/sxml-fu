@@ -1,0 +1,17 @@
+base-uri
+determine-page
+first-entry
+last-entry
+normal->starred-transformation-rules
+output-xml
+output-xml*
+page-count
+page-size
+page-var
+pagination-rules
+pagination-rules*
+shortcut-rules
+shortcut-rules*
+starred->normal-transformation-rules
+sxml-fold-rules
+sxml-fold-rules*

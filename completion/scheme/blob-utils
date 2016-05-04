@@ -1,0 +1,15 @@
+*blob-set-u16-be!
+*blob-set-u16-le!
+*blob-set-u32-be!
+*blob-set-u32-le!
+*blob-set-u64-be!
+*blob-set-u64-le!
+*blob-set-u8!
+blob->hex
+blob-set-u16-be!
+blob-set-u16-le!
+blob-set-u32-be!
+blob-set-u32-le!
+blob-set-u64-be!
+blob-set-u64-le!
+blob-set-u8!

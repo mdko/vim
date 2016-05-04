@@ -1,0 +1,3 @@
+download-release-error-hook
+download-release-info-file-error-hook
+download-release-success-hook

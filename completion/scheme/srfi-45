@@ -1,0 +1,9 @@
+delay
+eager
+eager-promise?
+force
+lazy
+lazy-promise?
+lazy-strict
+promise?
+recursive-promise?

@@ -64,6 +64,7 @@ nnoremap <C-h> <C-w>h	" move around split windows more easily
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+setl keywordprg=chicken-doc  " for scheme by using Ctrl-K
 " }}}
 " Folding {{{
 "=== folding ===
@@ -96,7 +97,7 @@ nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-nnoremap <leader>n :call ToggleNumber()<CR>
+nnoremap <leader>nn :call ToggleNumber()<CR>
 nnoremap <leader><space> :noh<CR>
 nnoremap <leader>s :mksession<CR>
 " silver searcher (https://github.com/rking/ag.vim) -- like ack, but better
@@ -217,8 +218,7 @@ let g:TagHighlightSettings = {}
 endif
 "let g:TagHighlightSettings['TagFileName'] = $CTAGS
 " }}}
-" SHIM {{{
-" Superior Haskell Interaction Mode
+" SHIM (Superior Haskell Interaction Mode) {{{
 " (http://www.vim.org/scripts/script.php?script_id=2356)
 autocmd FileType haskell nmap <C-c><C-l> :GhciRange<CR>
 autocmd FileType haskell vmap <C-c><C-l> :GhciRange<CR>
@@ -255,7 +255,7 @@ filetype off
 syntax on
 filetype plugin indent on
 " }}}
-" Vim-slime (working!) {{{
+" Vim-slime (working for Clojure, Chicken-Scheme, etc.!) {{{
 " See [https://github.com/jpalardy/vim-slime]
 " Steps: 1. run tmux
 "        2. open window with two panes, one running ghci/whatever
@@ -471,5 +471,9 @@ let g:rainbow_conf = {
 \		'css': 0,
 \	}
 \}
+" }}}
+" CoqID Emulator {{{
+let g:CoqIDEDefaultKeyMap = 1
+let CoqIDE_coqtop = "/usr/local/bin/coqtop"
 " }}}
 " vim:foldmethod=marker:foldlevel=0

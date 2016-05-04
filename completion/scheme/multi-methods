@@ -1,0 +1,13 @@
+define-multi-method
+get-tag
+multi-method-arity
+multi-method-empty?
+multi-method-insert!
+multi-method-keys
+multi-method-tree
+multi-method-variadic?
+multi-method?
+multi-methods
+nlambda
+tag
+tagged-procedure?

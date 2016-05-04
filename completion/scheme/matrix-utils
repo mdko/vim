@@ -1,0 +1,15 @@
+define-matrix-map
+define-utility-matrices
+f64vector-meshgrid
+f64vector-repmat
+make-fill-matrix
+make-linspace
+make-logspace
+make-matrix-diag
+make-matrix-eye
+make-matrix-fold
+make-matrix-fold-partial
+make-matrix-map
+make-matrix-ones
+make-matrix-zeros
+with-utility-matrices

@@ -1,0 +1,16 @@
+free-term-attrs
+get-terminal-attributes
+make-term-attrs
+set-terminal-attributes!
+stty
+term-attrs-cc
+term-attrs-cc-set!
+term-attrs-cflag
+term-attrs-cflag-set!
+term-attrs-iflag
+term-attrs-iflag-set!
+term-attrs-lflag
+term-attrs-lflag-set!
+term-attrs-oflag
+term-attrs-oflag-set!
+with-stty

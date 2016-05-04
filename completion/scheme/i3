@@ -1,0 +1,8 @@
+cmd
+connect
+descend-focused
+filter-containers
+focused-con
+subscribe
+tree
+workspaces

@@ -1,0 +1,17 @@
+php-s11n-array-reader
+php-s11n-object-reader
+php-s11n-read
+php-s11n-read-array
+php-s11n-read-array/alist
+php-s11n-read-array/hash-table
+php-s11n-read-boolean
+php-s11n-read-float
+php-s11n-read-integer
+php-s11n-read-null
+php-s11n-read-object
+php-s11n-read-string
+php-s11n-reader
+php-s11n-write
+php-s11n-writer
+php-serialize
+php-unserialize

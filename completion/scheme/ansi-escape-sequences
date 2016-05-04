@@ -1,0 +1,17 @@
+cursor-backward
+cursor-down
+cursor-forward
+cursor-position
+cursor-up
+erase-display
+erase-line
+hide-cursor
+reset-mode
+restore-cursor-position
+save-cursor-position
+set-color256!
+set-mode
+set-text
+set-text256
+set-title
+show-cursor

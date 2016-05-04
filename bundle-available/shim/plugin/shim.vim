@@ -71,6 +71,7 @@
 
 if has("ruby")
 
+" TODO: fix this script to work with `stack repl`
 if !exists('g:shim_ghciInterp')
     let g:shim_ghciInterp = "ghci"
 endif

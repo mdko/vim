@@ -1,0 +1,7 @@
+*redis-in-port*
+*redis-out-port*
+redis-connect
+redis-ping
+redis-publish
+redis-read-response
+redis-write-command

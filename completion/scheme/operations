@@ -1,0 +1,5 @@
+define-operation
+define-predicate
+object
+operation
+operation?

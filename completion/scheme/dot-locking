@@ -1,0 +1,5 @@
+break-dot-lock
+obtain-dot-lock
+release-dot-lock
+with-dot-lock
+with-dot-lock*

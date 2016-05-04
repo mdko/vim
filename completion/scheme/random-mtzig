@@ -1,0 +1,16 @@
+random-mtzig:f32vector-randb!
+random-mtzig:f32vector-rande!
+random-mtzig:f32vector-randn!
+random-mtzig:f32vector-randu!
+random-mtzig:f64vector-randb!
+random-mtzig:f64vector-rande!
+random-mtzig:f64vector-randn!
+random-mtzig:f64vector-randp!
+random-mtzig:f64vector-randu!
+random-mtzig:init
+random-mtzig:randb!
+random-mtzig:rande!
+random-mtzig:randn!
+random-mtzig:random!
+random-mtzig:randp!
+random-mtzig:randu!

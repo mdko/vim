@@ -1,0 +1,9 @@
+bindtextdomain
+dcgettext
+dcngettext
+dgettext
+dngettext
+gettext
+make-gettext
+ngettext
+textdomain

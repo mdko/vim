@@ -1,0 +1,14 @@
+!
+%
+?
+@
+^
+current-root-object
+object-apply/noslot-thunk
+object-get
+object-parent
+object-raw-clone/copy-all-slots
+object-raw-clone/copy-immed-slots
+object-raw-clone/no-slots-copy
+object-set!
+object?

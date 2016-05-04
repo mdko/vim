@@ -1,0 +1,13 @@
+lua-call
+lua-close
+lua-eval
+lua-function?
+lua-global-ref
+lua-open
+lua-run-file
+lua-run-string
+lua-state?
+lua-table-ref
+lua-table?
+lua-thread?
+lua-userdata?

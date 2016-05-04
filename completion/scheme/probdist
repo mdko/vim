@@ -1,0 +1,11 @@
+make-normal-pdf
+make-sampled-pdf
+normal-pdf:covariance
+normal-pdf:density
+normal-pdf:expectation
+normal-pdf:sample
+sampled-pdf:covariance
+sampled-pdf:expectation
+sampled-pdf:find-sample
+sampled-pdf:normalize
+sampled-pdf:resample

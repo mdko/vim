@@ -1,0 +1,13 @@
+lognum*
+lognum+
+lognum-
+lognum->number
+lognum-abs
+lognum-neg
+lognum-recip
+lognum-sign
+lognum-signum
+lognum-value
+lognum/
+lognum?
+number->lognum

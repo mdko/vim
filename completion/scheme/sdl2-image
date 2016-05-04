@@ -1,0 +1,10 @@
+compiled-version
+current-version
+init!
+load
+load*
+load-rw
+load-rw*
+load-typed-rw
+load-typed-rw*
+quit!

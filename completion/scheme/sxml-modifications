@@ -1,0 +1,8 @@
+sxml-delete
+sxml-delete-undeep
+sxml-insert-following
+sxml-insert-into
+sxml-insert-preceding
+sxml-modify
+sxml-modify!
+sxml-rename

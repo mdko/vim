@@ -1,0 +1,6 @@
+interp1d:from-sequence
+interp1d:lbound
+interp1d:linear
+interp1d:nearest
+interp1d:piecewise-quadratic
+interp1d:ubound

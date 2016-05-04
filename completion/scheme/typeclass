@@ -1,0 +1,5 @@
+define-class
+define=>
+import-instance
+lambda=>
+with-instance

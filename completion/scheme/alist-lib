@@ -1,0 +1,11 @@
+alist-fold
+alist-keys
+alist-map
+alist-ref
+alist-ref/default
+alist-set
+alist-set!
+alist-size
+alist-update!
+alist-update!/default
+alist-values

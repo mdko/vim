@@ -1,0 +1,16 @@
+%chickadee:debug-incremental-search-latency
+ajax-log
+cache-nodes-for
+cache-static-content-for
+cdoc-uri
+chickadee-css-files
+chickadee-early-js-files
+chickadee-js-files
+chickadee-start-server
+chickadee-uri
+incremental-search
+incremental-search-delay
+incremental-search-uri
+last-modified
+maximum-match-results
+maximum-match-signatures

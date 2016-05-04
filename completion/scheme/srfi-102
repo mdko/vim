@@ -1,0 +1,8 @@
+arity-at-least-value
+arity-at-least?
+fixed-arity->arity-at-least
+procedure-arity
+procedure-arity-available?
+procedure-arity-includes?
+procedure-fixed-arity?
+procedure-minimum-arity

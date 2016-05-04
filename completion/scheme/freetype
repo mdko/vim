@@ -1,0 +1,11 @@
+ft-get-char-index
+ft-get-kerning
+ft-init-freetype
+ft-load-char
+ft-load-glyph
+ft-new-face
+ft-render-glyph
+ft-select-charmap
+ft-set-char-size
+ft-set-pixel-size
+ft-set-transform

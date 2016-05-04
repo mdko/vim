@@ -1,0 +1,7 @@
+compile-file
+compile-file-options
+qs
+read-all
+scan-input-lines
+system*
+yes-or-no?

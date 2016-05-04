@@ -1,0 +1,16 @@
+environment-copy
+environment-empty?
+environment-extend!
+environment-extendable?
+environment-for-each
+environment-has-binding?
+environment-includes?
+environment-mutable?
+environment-ref
+environment-remove!
+environment-set!
+environment-set-mutable!
+environment-symbols
+environment?
+interaction-environment?
+make-environment

@@ -1,0 +1,12 @@
+current-allocation-limit
+current-fuel
+current-safe-environment
+default-safe-environment
+make-safe-environment
+safe-environment-macro-remove!
+safe-environment-macro-set!
+safe-environment-ref
+safe-environment-remove!
+safe-environment-set!
+safe-environment?
+safe-eval

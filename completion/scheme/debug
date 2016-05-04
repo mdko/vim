@@ -1,0 +1,5 @@
+debug
+debug-priority
+debug/syslog
+debug?
+trace

@@ -1,0 +1,13 @@
++specialized-io-string-buffer-size+
+read-complex
+read-fixnum
+read-flonum
+read-one-char
+read-string-between
+read-string-until
+specialized-io-error
+write-complex
+write-fixnum
+write-flonum
+write-one-char
+write-one-string

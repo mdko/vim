@@ -1,0 +1,16 @@
+<win>
+get-char
+height
+initialize
+key-down
+key-left
+key-right
+key-up
+make-win
+redraw
+width
+win-bottom
+win-left
+win-pointer
+win-right
+win-top

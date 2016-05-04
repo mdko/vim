@@ -1,0 +1,14 @@
+cvode-create-solver
+cvode-destroy-solver
+cvode-reinit-solver
+cvode-solve
+cvode-yy
+ida-create-solver
+ida-destroy-solver
+ida-get-last-order
+ida-get-last-step
+ida-get-num-steps
+ida-reinit-solver
+ida-solve
+ida-yp
+ida-yy

@@ -1,0 +1,15 @@
+list->stack
+make-stack
+stack->list
+stack-count
+stack-cut!
+stack-empty!
+stack-empty?
+stack-fold
+stack-for-each
+stack-map
+stack-peek
+stack-poke!
+stack-pop!
+stack-push!
+stack?

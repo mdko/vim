@@ -1,0 +1,14 @@
+acquire-temporary-credential
+acquire-token-credential
+authenticated-call-with-input-request
+authorize-resource-owner
+call-with-input-request
+make-oauth-credential
+make-oauth-service
+make-oauth-service-provider
+oauth-protocol-parameters
+oauth-service
+oauth-token-credential
+secret
+token
+with-oauth

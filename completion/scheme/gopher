@@ -1,0 +1,9 @@
+accept
+entry->string
+make-entry
+max-line-length
+send-binary-file
+send-entry
+send-lastline
+send-line
+send-text-file

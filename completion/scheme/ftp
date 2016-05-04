@@ -1,0 +1,14 @@
+ftp:abort
+ftp:change-directory
+ftp:connect
+ftp:create-directory
+ftp:delete-directory
+ftp:delete-file
+ftp:disconnect
+ftp:ftp?
+ftp:open-input-file
+ftp:open-list
+ftp:open-output-file
+ftp:rename-file
+ftp:set-mode!
+ftp:set-type!

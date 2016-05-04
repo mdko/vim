@@ -1,0 +1,12 @@
+call-with-encoded-input-file
+call-with-encoded-output-file
+ces-convert
+ces-equivalent?
+ces-upper-compatible?
+detect-encoding
+detect-file-encoding
+open-encoded-input-file
+open-encoded-output-file
+read-encoded-string
+with-input-from-encoded-file
+with-output-to-encoded-file

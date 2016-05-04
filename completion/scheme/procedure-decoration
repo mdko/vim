@@ -1,0 +1,11 @@
+decorate-lambda
+decorate-procedure
+decorated-lambda?
+decorated-procedure?
+define-procedure-extender
+lambda-decoration
+make-procedure-decorator
+make-procedure-extender
+procedure-decoration
+procedure-decorator-getter-and-setter
+procedure-decorator?

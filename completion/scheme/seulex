@@ -1,0 +1,9 @@
+seulex-create-solver
+seulex-destroy-solver
+seulex-ndec
+seulex-nfcn
+seulex-njac
+seulex-nsol
+seulex-nstep
+seulex-solve
+seulex-yy

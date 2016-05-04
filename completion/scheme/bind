@@ -1,0 +1,14 @@
+bind
+bind*
+bind-file
+bind-file*
+bind-include-path
+bind-opaque-type
+bind-options
+bind-rename
+bind-rename/pattern
+bind-type
+constructor
+delete
+destructor
+new

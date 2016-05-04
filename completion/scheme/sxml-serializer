@@ -1,0 +1,3 @@
+allow-prefix-redeclarations?
+conventional-ns-prefixes
+serialize-sxml

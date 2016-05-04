@@ -1,0 +1,5 @@
+char-ci-comparator
+generalized-equal?
+numeric-comparator
+predicates->comparator
+string-ci-comparator

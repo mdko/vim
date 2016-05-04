@@ -1,0 +1,10 @@
+call-with-cgi-query
+call-with-dynamic-fastcgi-query
+display-content-type-&c.
+display-status-&c.
+query-all
+query-any
+query-client-all
+query-client-any
+query-server-all
+query-server-any

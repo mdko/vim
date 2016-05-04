@@ -1,0 +1,14 @@
+*civet-ns-prefix*
+*civet-ns-uri*
+*default-nsmap*
+*enable-l10n*
+*site-path*
+*sort-functions*
+*sxpath-nsmap*
+*template-cache-path*
+*template-path*
+context->context
+make-context
+process-base-template
+process-template-set
+render

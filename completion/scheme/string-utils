@@ -1,0 +1,13 @@
+ascii-codepoint?
+blob_to_hex
+make-string*
+mem_to_hex
+s8vec_to_hex
+str_to_hex
+string->hex
+u8vec_to_hex
+unicode-char->string
+unicode-make-string
+unicode-string
+unicode-surrogate?
+unicode-surrogates->codepoint

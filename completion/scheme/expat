@@ -1,0 +1,10 @@
+expat:destroy-parser
+expat:make-external-entity-parser
+expat:make-parser
+expat:parse
+expat:set-character-data-handler!
+expat:set-comment-handler!
+expat:set-end-handler!
+expat:set-external-entity-ref-handler!
+expat:set-processing-instruction-handler!
+expat:set-start-handler!

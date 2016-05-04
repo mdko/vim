@@ -1,0 +1,5 @@
+digraph-disjoint-union
+digraph-rename
+digraph-union
+make-digraph
+make-random-gnp-digraph

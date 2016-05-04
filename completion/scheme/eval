@@ -1,0 +1,13 @@
+chicken-home
+eval
+extension-information
+load
+load-library
+load-noisily
+load-relative
+provide
+provided?
+repl
+repository-path
+require
+set-dynamic-load-mode!

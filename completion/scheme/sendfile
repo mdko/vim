@@ -1,0 +1,7 @@
+force-implementation
+impl:mmapped
+impl:read-write-loop/fd
+impl:read-write-loop/port
+impl:sendfile
+implementation-selector
+sendfile

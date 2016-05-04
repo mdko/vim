@@ -1,0 +1,14 @@
+actual-k
+bloom-filter-exists?
+bloom-filter-k
+bloom-filter-m
+bloom-filter-n
+bloom-filter-p-false-positive
+bloom-filter-set!
+desired-m
+make-bloom-filter
+optimum-k
+optimum-m
+optimum-size
+p-false-positive
+p-random-one-bit

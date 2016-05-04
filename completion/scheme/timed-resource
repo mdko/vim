@@ -1,0 +1,5 @@
+make-timed-resource
+timed-resource-name
+timed-resource-timeout
+timed-resource?
+with-timed-resource

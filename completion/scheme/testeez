@@ -1,0 +1,6 @@
+test-define
+test-eval
+test/eq
+test/equal
+test/eqv
+testeez

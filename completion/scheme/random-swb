@@ -1,0 +1,9 @@
+make-swb-random-state
+swb-random
+swb-random!
+swb-random-natural
+swb-random-natural!
+swb-random-range
+swb-random-range!
+swb-random-real
+swb-random-real!

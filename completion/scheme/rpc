@@ -1,0 +1,11 @@
+rpc:close-all-connections!
+rpc:close-connection!
+rpc:connect-procedure
+rpc:current-peer
+rpc:default-server-port
+rpc:get-connection
+rpc:is-connected?
+rpc:make-server
+rpc:procedure
+rpc:publish-procedure!
+rpc:withdraw-procedure!

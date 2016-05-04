@@ -1,0 +1,10 @@
+clear-extended-attributes!
+copyfile
+copyfile-check
+get-extended-attribute
+get-extended-attributes
+list-extended-attributes
+pack-appledouble
+remove-extended-attribute!
+set-extended-attribute!
+unpack-appledouble

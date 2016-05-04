@@ -1,0 +1,9 @@
+list->number-vector
+make-number-vector
+number-subvector
+number-vector
+number-vector->list
+number-vector-length
+number-vector-ref
+number-vector-set!
+number-vector-type

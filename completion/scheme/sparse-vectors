@@ -1,0 +1,5 @@
+make-sparse-vector
+sparse-vector->list
+sparse-vector-ref
+sparse-vector-set!
+sparse-vector?

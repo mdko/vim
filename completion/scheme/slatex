@@ -1,0 +1,3 @@
+process-main-tex-file
+set-tex-search-path!
+tex-search-path

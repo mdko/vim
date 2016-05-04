@@ -1,0 +1,11 @@
+<vfs:file-system>
+<vfs:local-file-system>
+vfs:current-file-system
+vfs:delete-file
+vfs:file-exists?
+vfs:open-file
+vfs:open-input-file
+vfs:open-output-file
+vfs:register-file-system
+vfs:rename-file
+vfs:unregister-file-system

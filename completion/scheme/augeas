@@ -1,0 +1,16 @@
+aug-close
+aug-defnode
+aug-defvar
+aug-exists?
+aug-get
+aug-init
+aug-insert!
+aug-load!
+aug-match
+aug-match-count
+aug-move!
+aug-print
+aug-remove!
+aug-save!
+aug-set!
+aug-set-multiple!

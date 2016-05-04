@@ -1,0 +1,14 @@
+alist->
+define-private-structure
+define-public-structure
+define-structure
+local-set-
+local-setp-
+make-
+make-keywords-
+name
+old-vector->
+set-
+setp-
+update-
+updatep-
