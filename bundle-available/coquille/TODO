@@ -1,0 +1,2 @@
+:CoqLaunch doesn't work, as it says there is an error with the -ideslave option and Coq not being able to open up a communication channel. I added extra arguments to coquille.py, but that didn't solve it.
+Leaving in /bundle because it still provides good syntax highlighting for Coq

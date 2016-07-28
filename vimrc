@@ -25,6 +25,9 @@ set clipboard=unnamed
 inoremap jk <esc>
 noremap Y y$
 "cnoremap W w
+let g:tex_flavor='latex'
+set grepprg=grep\ -nH\ $*
+let g:Imap_UsePlaceHolders=0
 " }}}
 " Spaces & Tabs {{{
 set tabstop=2           " 4 space tab
@@ -255,11 +258,12 @@ filetype off
 syntax on
 filetype plugin indent on
 " }}}
-" Vim-slime (working for Clojure, Chicken-Scheme, etc.!) {{{
+" Vim-slime (working for Clojure, Chicken-Scheme, Coq, Haskell, etc.!) {{{
 " See [https://github.com/jpalardy/vim-slime]
 " Steps: 1. run tmux
 "        2. open window with two panes, one running ghci/whatever
-"        3. select text visually and run C-c C-c to send to target pane
+"        3. select text visually (default inner paragraph, I believe)
+"           and run C-c C-c to send to target pane
 " Target pane information:
 "   ":" current window, current pane
 "   ":i" ith window, current pane
@@ -269,6 +273,7 @@ filetype plugin indent on
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1"}
+nmap <c-c><c-l> <Plug>SlimeLineSend
 "}}}
 " Slimv (for Lisp/Scheme/Clojure: use with <leader>c) (unused) {{{
 "let g:slimv_swank_cmd = '! xterm -e clisp /home/michael/.vim/bundle/slimv/slime/start-swank.lisp &'
@@ -472,8 +477,8 @@ let g:rainbow_conf = {
 \	}
 \}
 " }}}
-" CoqID Emulator {{{
-let g:CoqIDEDefaultKeyMap = 1
-let CoqIDE_coqtop = "/usr/local/bin/coqtop"
+" CoqID Emulator (unused) {{{
+"let g:CoqIDEDefaultKeyMap = 1
+"let CoqIDE_coqtop = "/usr/local/bin/coqtop"
 " }}}
 " vim:foldmethod=marker:foldlevel=0
